@@ -22,9 +22,7 @@ change = 0
 
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-    #print(csvreader)
     csv_header = next(csvreader)
-    #print(f"CSV Header: {csv_header}")
 
     for row in csvreader:
         total_number_of_months += 1
@@ -43,10 +41,8 @@ with open(csvpath, newline='') as csvfile:
         last_profit_loss = int(row[1])
 avg_change = avg_change / total_number_of_months
 
-open(output_path, 'w', newline='') as csvfile:
+csvfile = open(output_path, 'w', newline='')
 csvwriter = csv.writer(csvfile, delimiter=',')
-#csvwriter.writerow(['Caleb', 'Frost', '505-80-2901'])
-
 
 print("Total Months: " + str(total_number_of_months))
 csvwriter.writerow(['"Total Months: " + str(total_number_of_months)'])
