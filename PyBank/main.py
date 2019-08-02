@@ -16,7 +16,7 @@ avg_change = 0
 greatest_increase = 0
 greatest_increase_date = "1/1/1900"
 greatest_decrease = 0
- greatest_decrease_date = "1/1/1900"
+greatest_decrease_date = "1/1/1900"
 change = 0
 
 with open(csvpath, newline='') as csvfile:
