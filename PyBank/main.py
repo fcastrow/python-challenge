@@ -16,7 +16,7 @@ avg_change = 0
 greatest_increase = 0
 greatest_increase_date = "1/1/1900"
 greatest_decrease = 0
- = "1/1/1900"
+ greatest_decrease_date = "1/1/1900"
 change = 0
 
 with open(csvpath, newline='') as csvfile:
@@ -41,9 +41,7 @@ greatest_decrease_date
                 greatest_decrease_date = row[0]
 
         last_profit_loss = int(row[1])
-        
 avg_change = avg_change / total_number_of_months
-            
 
 print("Total months = " + str(total_number_of_months))
 print("net_total = " + str(net_total))
