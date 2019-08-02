@@ -27,7 +27,7 @@ with open(csvpath, newline='') as csvfile:
         net_total += int(row[1])
 
         last_profit_loss = int(row[1])
-        if total_number_of_months > 1
+        if total_number_of_months > 1:
             avg_change += int(row[1]) - last_profit_loss
 
         avg_change = avg_change / total_number_of_months
