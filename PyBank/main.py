@@ -45,5 +45,5 @@ avg_change = avg_change / total_number_of_months
 print("Total months = " + str(total_number_of_months))
 print("net_total = " + str(net_total))
 print("avg_change = " + str(avg_change))
-print("greatest_increase = " + greatest_increase_date + "(" + str(greatest_increase)) + ")"
-print("greatest_decrease = " + greatest_decrease_date + "(" + str(greatest_decrease)) + ")"
+print("greatest_increase = " + str(greatest_increase_date) + "(" + str(greatest_increase)) + ")"
+print("greatest_decrease = " + str(greatest_decrease_date) + "(" + str(greatest_decrease)) + ")"
