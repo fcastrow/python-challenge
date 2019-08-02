@@ -21,9 +21,9 @@ change = 0
 
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-    print(csvreader)
+    #print(csvreader)
     csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
+    #print(f"CSV Header: {csv_header}")
 
     for row in csvreader:
         total_number_of_months += 1
