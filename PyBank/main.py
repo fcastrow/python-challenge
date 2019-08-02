@@ -22,7 +22,6 @@ change = 0
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     print(csvreader)
-greatest_decrease_date
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
 
