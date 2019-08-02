@@ -42,8 +42,8 @@ with open(csvpath, newline='') as csvfile:
         last_profit_loss = int(row[1])
 avg_change = avg_change / total_number_of_months
 
-print("Total months = " + str(total_number_of_months))
-print("net_total = " + str(net_total))
-print("avg_change = " + str(avg_change))
-print("greatest_increase = " + str(greatest_increase_date) + " (" + str(greatest_increase) + ")" )
-print("greatest_decrease = " + str(greatest_decrease_date) + " (" + str(greatest_decrease) + ")" )
+print("Total Months: " + str(total_number_of_months))
+print("Total: $" + str(net_total))
+print("Average Change: $" + str(avg_change))
+print("Greatest Increase in Profits: " + str(greatest_increase_date) + " (" + str(greatest_increase) + ")" )
+print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " (" + str(greatest_decrease) + ")" )
