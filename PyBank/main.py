@@ -45,5 +45,5 @@ avg_change = avg_change / total_number_of_months
 print("Total Months: " + str(total_number_of_months))
 print("Total: $" + str(net_total))
 print("Average Change: $" + str(avg_change))
-print("Greatest Increase in Profits: " + str(greatest_increase_date) + " (" + str(greatest_increase) + ")" )
-print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " (" + str(greatest_decrease) + ")" )
+print("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")" )
+print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")" )
