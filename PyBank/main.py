@@ -14,13 +14,15 @@ total_number_of_months = 0
 net_total = 0
 avg_change = 0
 greatest_increase = 0
+greatest_increase_date = "1/1/1900"
 greatest_decrease = 0
+ = "1/1/1900"
 change = 0
 
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     print(csvreader)
-
+greatest_decrease_date
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
 
@@ -32,9 +34,11 @@ with open(csvpath, newline='') as csvfile:
             change = int(row[1]) - last_profit_loss
             avg_change += change
             if change > greatest_increase:
+                greatest_increase_date = row[0]
                 greatest_increase = change
             if change < greatest_decrease:
                 greatest_decrease = change
+                greatest_decrease_date = row[0]
 
         last_profit_loss = int(row[1])
         
