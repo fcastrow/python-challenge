@@ -1,1 +1,8 @@
-total_number_of_votes 3521001
+Election Results
+-------------------------
+Total Votes: 3521001
+Khan: 2218231
+Correy: 704200
+Li: 492940
+O'Tooley: 105630
+-------------------------

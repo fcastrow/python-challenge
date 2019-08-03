@@ -5,7 +5,6 @@
 #This is my second Python Program
 #
 #2019.08.03
-#simplify, quit trying to use a list of two lists, just use two lists...
 
 import os
 import csv
@@ -27,23 +26,37 @@ with open(csvpath, newline='') as csvfile:
         candidate = row[2]
         candidate_found = False
 
-        for candidate_index in candidate_list:
+        for candidate_index in range(len(candidate_list)):
             if( candidate == candidate_list[candidate_index] ):
                 candidate_votes_list[candidate_index] += 1
                 candidate_found = True
                 break
 
         if not(candidate_found):
+            candidate_list.append(candidate)
+            candidate_votes_list.append(1)
             candidate_count += 1
-            candidate_list[candidate_count] = candidate
-            candidate_votes_list[candidate_count] = 1
-            
-            
-
 
 OutputFile = open(output_path, 'w')
 
-print("total_number_of_votes " + str(total_number_of_votes))
-OutputFile.write("total_number_of_votes " + str(total_number_of_votes) + "\n" )
+print("Election Results")
+OutputFile.write("Election Results\n" )
+
+print("-------------------------")
+OutputFile.write("-------------------------\n" )
+
+print("Total Votes: " + str(total_number_of_votes))
+OutputFile.write("Total Votes: " + str(total_number_of_votes) + "\n" )
+
+print("-------------------------")
+OutputFile.write("-------------------------\n" )
+
+for candidate_index in range(len(candidate_list)):
+    print(candidate_list[candidate_index] + ": " + str(total_number_of_votes/candidate_votes_list[candidate_index]) + "(" + str(candidate_votes_list[candidate_index]) + ")" )
+    OutputFile.write(candidate_list[candidate_index] + ": " + str(total_number_of_votes/candidate_votes_list[candidate_index]) + "(" + str(candidate_votes_list[candidate_index]) + ")\n" )
+
+
+print("-------------------------")
+OutputFile.write("-------------------------\n" )
 
 OutputFile.close()
