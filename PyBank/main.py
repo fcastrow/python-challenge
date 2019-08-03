@@ -44,18 +44,18 @@ avg_change = avg_change / total_number_of_months
 OutputFile = open(output_path, 'w')
 
 print("Total Months: " + str(total_number_of_months))
-OutputFile.write("Total Months: " + str(total_number_of_months))
+OutputFile.write("Total Months: " + str(total_number_of_months) + "\n" )
 
 print("Total: $" + str(net_total))
-OutputFile.write("Total: $ " + str(net_total))
+OutputFile.write("Total: $ " + str(net_total) + "\n" )
 
 print("Average Change: $" + str(avg_change))
-OutputFile.write("Average Change: $" + str(avg_change))
+OutputFile.write("Average Change: $" + str(avg_change) + "\n" )
 
 print("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")" )
-OutputFile.write("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")")
+OutputFile.write("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")" + "\n" )
 
 print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")" )
-OutputFile.write("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")")
+OutputFile.write("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")" + "\n" )
 
 OutputFile.close()
