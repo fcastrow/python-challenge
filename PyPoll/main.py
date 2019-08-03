@@ -13,6 +13,8 @@ output_path = os.path.join(".", "output", "Python_homework_2.5.txt")
 
 candidate_list = []
 candidate_votes_list = []
+winner = "me"
+winner_votes = 0
 
 total_number_of_votes = 0
 candidate_count = 0
@@ -52,9 +54,17 @@ print("-------------------------")
 OutputFile.write("-------------------------\n" )
 
 for candidate_index in range(len(candidate_list)):
-    print(candidate_list[candidate_index] + ": " + str(total_number_of_votes/candidate_votes_list[candidate_index]) + "(" + str(candidate_votes_list[candidate_index]) + ")" )
-    OutputFile.write(candidate_list[candidate_index] + ": " + str(total_number_of_votes/candidate_votes_list[candidate_index]) + "(" + str(candidate_votes_list[candidate_index]) + ")\n" )
+    print(candidate_list[candidate_index] + ": " + str(100*candidate_votes_list[candidate_index]/total_number_of_votes) + "(" + str(candidate_votes_list[candidate_index]) + ")" )
+    OutputFile.write(candidate_list[candidate_index] + ": " + str(100*candidate_votes_list[candidate_index]/total_number_of_votes) + "(" + str(candidate_votes_list[candidate_index]) + ")\n" )
+    if(candidate_votes_list[candidate_index] > winner_votes)
+        winner_votes = candidate_votes_list[candidate_index]
+        winner = candidate_list[candidate_index]
 
+print("-------------------------")
+OutputFile.write("-------------------------\n" )
+
+print("Winner: " + winner)
+OutputFile.write("Winner: "  + winner + "\n" )
 
 print("-------------------------")
 OutputFile.write("-------------------------\n" )
