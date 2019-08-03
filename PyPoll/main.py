@@ -11,11 +11,10 @@ import csv
 csvpath = os.path.join('.', 'Resources', 'election_data.csv')
 output_path = os.path.join(".", "output", "Python_homework_2.5.txt")
 
+candidate_vote_lists_in_a_list = [[],[]]
+
 total_number_of_votes = 0
-list_of_candidates =[]
-pct_of_votes_each_candidate_won = []
-total_number_of_votes_each_candidate_won = []
-election_winner = "me"
+candidate_count = 0
 
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -23,6 +22,21 @@ with open(csvpath, newline='') as csvfile:
 
     for row in csvreader:
         total_number_of_votes += 1
+        candidate = row[2]
+        candidate_found = false
+        for candidate_index == 0 to candidate_count:
+            if( candidate == candidate_vote_lists_in_a_list[candidate_index] ):
+                candidate_vote_lists_in_a_list[1] += 1
+                candidate_found = true
+                break
+
+        if not candidate_found
+            candidate_count += 1
+            candidate_vote_lists_in_a_list[candidate_count] = candidate
+            candidate_vote_lists_in_a_list[candidate_count, 0] = 1
+            
+            
+
 
 OutputFile = open(output_path, 'w')
 
