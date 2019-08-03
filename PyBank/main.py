@@ -58,3 +58,4 @@ csvwriter.writerow(['"Greatest Increase in Profits: " + str(greatest_increase_da
 
 print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")" )
 csvwriter.writerow(['("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")"'])
+csvfile.close()
