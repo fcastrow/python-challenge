@@ -9,7 +9,7 @@ import os
 import csv
 
 csvpath = os.path.join('.', 'Resources', 'budget_data.csv')
-output_path = os.path.join(".", "output", "Python_homework_1.5.csv")
+output_path = os.path.join(".", "output", "Python_homework_1.5.txt")
 
 total_number_of_months = 0
 net_total = 0
@@ -41,21 +41,21 @@ with open(csvpath, newline='') as csvfile:
         last_profit_loss = int(row[1])
 avg_change = avg_change / total_number_of_months
 
-csvfile = open(output_path, 'w', newline='')
-csvwriter = csv.writer(csvfile, delimiter=',')
+OutputFile = open(output_path, 'w')
 
 print("Total Months: " + str(total_number_of_months))
-csvwriter.writerow("Total Months: " + str(total_number_of_months))
+OutputFile.write("Total Months: " + str(total_number_of_months))
 
 print("Total: $" + str(net_total))
-csvwriter.writerow("Total: $ " + str(net_total))
+OutputFile.write("Total: $ " + str(net_total))
 
 print("Average Change: $" + str(avg_change))
-csvwriter.writerow("Average Change: $" + str(avg_change))
+OutputFile.write("Average Change: $" + str(avg_change))
 
 print("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")" )
-csvwriter.writerow("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")")
+OutputFile.write("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")")
 
 print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")" )
-csvwriter.writerow("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")")
-csvfile.close()
+OutputFile.write("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")")
+
+OutputFile.close()
