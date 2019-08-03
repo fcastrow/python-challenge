@@ -1,0 +1,5 @@
+"""Total Months: "" + str(total_number_of_months)"
+"""Total Months: "" + str(total_number_of_months)"
+"""Average Change: $"" + str(avg_change)"
+"""Greatest Increase in Profits: "" + str(greatest_increase_date) + "" ($"" + str(greatest_increase) + "")"""
+"(""Greatest Decrease in Profits: "" + str(greatest_decrease_date) + "" ($"" + str(greatest_decrease) + "")"""
