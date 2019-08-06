@@ -43,7 +43,7 @@ with open(csvpath, newline='') as csvfile:
 
         last_profit_loss = int(row[1])
 
-avg_change = sum_of_changes / total_number_of_months
+avg_change = sum_of_changes / (total_number_of_months-1)
 
 OutputFile = open(output_path, 'w')
 
