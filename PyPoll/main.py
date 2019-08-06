@@ -54,8 +54,8 @@ print("-------------------------")
 OutputFile.write("-------------------------\n" )
 
 for candidate_index in range(len(candidate_list)):
-    print(candidate_list[candidate_index] + ": " + str(round(100*candidate_votes_list[candidate_index]/total_number_of_votes,3)) + "% (" + str(candidate_votes_list[candidate_index]) + ")" )
-    OutputFile.write(candidate_list[candidate_index] + ": " + str(round(100*candidate_votes_list[candidate_index]/total_number_of_votes,3)) + "% (" + str(candidate_votes_list[candidate_index]) + ")\n" )
+    print(candidate_list[candidate_index] + ": " + str(round(100*candidate_votes_list[candidate_index]/total_number_of_votes,5)) + "% (" + str(candidate_votes_list[candidate_index]) + ")" )
+    OutputFile.write(candidate_list[candidate_index] + ": " + str(round(100*candidate_votes_list[candidate_index]/total_number_of_votes,5)) + "% (" + str(candidate_votes_list[candidate_index]) + ")\n" )
     if(candidate_votes_list[candidate_index] > winner_votes):
         winner_votes = candidate_votes_list[candidate_index]
         winner = candidate_list[candidate_index]

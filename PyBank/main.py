@@ -14,6 +14,7 @@ output_path = os.path.join(".", "output", "Python_homework_1.5.txt")
 total_number_of_months = 0
 net_total = 0
 avg_change = 0
+sum_of_changes = 0
 greatest_increase = 0
 greatest_increase_date = "1/1/1900"
 greatest_decrease = 0
@@ -29,9 +30,10 @@ with open(csvpath, newline='') as csvfile:
         total_number_of_months += 1
         net_total += int(row[1])
 
-        #if total_number_of_months > 1:
-        change = int(row[1]) - last_profit_loss
-        avg_change += change
+        if total_number_of_months > 1:
+            change = int(row[1]) - last_profit_loss
+            sum_of_changes += change
+
         if change > greatest_increase:
             greatest_increase_date = row[0]
             greatest_increase = change
@@ -40,7 +42,8 @@ with open(csvpath, newline='') as csvfile:
             greatest_decrease_date = row[0]
 
         last_profit_loss = int(row[1])
-avg_change = avg_change / total_number_of_months
+
+avg_change = sum_of_changes / total_number_of_months
 
 OutputFile = open(output_path, 'w')
 
@@ -50,8 +53,8 @@ OutputFile.write("Total Months: " + str(total_number_of_months) + "\n" )
 print("Total: $" + str(net_total))
 OutputFile.write("Total: $ " + str(net_total) + "\n" )
 
-print("Average Change: $" + str(avg_change))
-OutputFile.write("Average Change: $" + str(avg_change) + "\n" )
+print("Average Change: $" + str(round(avg_change, 2)))
+OutputFile.write("Average Change: $" + str(round(avg_change,2)) + "\n" )
 
 print("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")" )
 OutputFile.write("Greatest Increase in Profits: " + str(greatest_increase_date) + " ($" + str(greatest_increase) + ")" + "\n" )
@@ -60,4 +63,3 @@ print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + s
 OutputFile.write("Greatest Decrease in Profits: " + str(greatest_decrease_date) + " ($" + str(greatest_decrease) + ")" + "\n" )
 
 OutputFile.close()
-#change
